@@ -1,0 +1,4 @@
+test_cases = [
+    {"Gender": "Male", "HeightCm": 171, "WeightKg": 96, "pmi":32.830615, "category": "Moderately obese", "risk": "Medium risk"},
+    { "Gender": "Female", "HeightCm": 166, "WeightKg": 62, "pmi":22.499637,"category": "Normal weight", "risk": "Low risk" }
+]
