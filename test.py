@@ -1,11 +1,11 @@
+import json
+import sys
+
 import pmi
-from data import data
 from category import category, category_list
 
-from test_cases import test_cases
 
-
-if __name__ == '__main__':
+def run_test(test_cases):
     all_tests_passed = True
     df_testing = pmi.main(test_cases,category,category_list)
     tests = pmi.construct_df(test_cases)
@@ -35,6 +35,17 @@ if __name__ == '__main__':
                 all_tests_passed = False
         
     if all_tests_passed:
+        return True
+    else:
+        return False
+
+if __name__ == '__main__':
+    args = sys.argv
+    f = open(args[1],'r')
+    test_cases = json.loads(f.read())
+
+    result = run_test(test_cases)
+    if result:
         print("all tests passed!")
     else:
         print("some tests failed. Please check")

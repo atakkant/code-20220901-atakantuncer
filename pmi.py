@@ -1,6 +1,4 @@
 import pandas as pd
-from test_cases import test_cases
-
 
 def construct_df(data,columns=None):
     if isinstance(data,dict):
